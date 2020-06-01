@@ -111,14 +111,14 @@ class ZebraPuzzle:
             table += f"<th colspan='{self.number_attributes:d}' style='text-align:center;'>{k}</th><th></th>"
         table += "</tr><tr><th></th><th></th>"
         # Print attributes
-        for ki in range(1, self.number_attributes):
+        for ki in range(1, self.number_categories):
             k = self.categories[ki]
             for att in self.categories_attributes[k]:
                 table += f"<th class='rotate'><span>{att}</span></th>"
             table += "<th></th>"
         table += "</tr><tr>"
         # Print main body
-        for ki in range(0, self.number_attributes - 1):
+        for ki in range(0, self.number_categories - 1):
             # Print categories on left
             k = self.categories[ki]
             table += f"<th rowspan='{self.number_attributes:d}'><span>{k}</span></th>"
